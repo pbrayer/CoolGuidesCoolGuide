@@ -1,0 +1,20 @@
+{
+  "name": "coolguidescoolguide",
+  "version": "1.0.0",
+  "description": "coolguidescoolguide",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "reddit",
+    "guide",
+    "coolguides"
+  ],
+  "author": "Sam",
+  "license": "ISC",
+  "dependencies": {
+    "nbayes": "^3.0.2",
+    "snoowrap": "^1.22.0"
+  }
+}
