@@ -26,6 +26,8 @@
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/09806aa565.js" crossorigin="anonymous"></script>
+  <script src = "scripts.js"></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -41,14 +43,22 @@
     <div class="container">
       <div class="row">
         <div class="one-half column">
-          <h4 class="hero-heading">Stop coding non-responsive sites. Let users view sites from anywhere.</h4>
-          <a class="button button-primary" href="http://getskeleton.com">Try Skeleton</a>
+          <h4 class="hero-heading">A Cool Guide for r/coolguides.</h4>
+          <!-- <a class="button button-primary" href="http://getskeleton.com">Try Skeleton</a> -->
         </div>
         <div class="one-half column phones">
-          <img class="phone" src="images/iphone.png">
-          <img class="phone" src="images/iphone.png">
+          <img class="phone" src="images/cool.png">
+          <!-- <img class="phone" src="images/iphone.png"> -->
         </div>
       </div>
+      <br><br><br><br><br><br>
+      <div class = "row" style = "text-align: center">
+        <a href = "#categories">
+        <i class="fas fa-arrow-circle-down fa-4x"></i>
+        <br>
+        <h5>Skip to Categories</h5>
+      </a>
+    </div>
     </div>
   </div>
 
@@ -56,19 +66,19 @@
     <div class="container">
       <div class="row">
         <div class="one-third column value">
-          <h2 class="value-multiplier">67%</h2>
-          <h5 class="value-heading">Purchase Increase</h5>
-          <p class="value-description">Percentage of users more likely to purchase on mobile friendly site.</p>
+          <h2 class="value-multiplier">12</h2>
+          <h5 class="value-heading">Categories</h5>
+          <p class="value-description">From Love & Relationships to Home & Auto.</p>
         </div>
         <div class="one-third column value">
-          <h2 class="value-multiplier">90%</h2>
-          <h5 class="value-heading">Multi-device Users</h5>
-          <p class="value-description">Most of the world accesses the internet on multiple devices.</p>
+          <h2 class="value-multiplier">100</h2>
+          <h5 class="value-heading">Posts</h5>
+          <p class="value-description">Top from the past year, filtered by keywords in each title into one of the twelve categories</p>
         </div>
         <div class="one-third column value">
-          <h2 class="value-multiplier">66%</h2>
-          <h5 class="value-heading">Sad Users</h5>
-          <p class="value-description">Percentage of users that are frustrated with page load times.</p>
+          <h2 class="value-multiplier">1</h2>
+          <h5 class="value-heading">Cool Guide</h5>
+          <!-- <p class="value-description">Percentage of users that are frustrated with page load times.</p> -->
         </div>
       </div>
     </div>
@@ -77,24 +87,83 @@
   <div class="section get-help">
     <div class="container">
       <h3 class="section-heading">Need help getting started?</h3>
-      <p class="section-description">Skeleton is an amazingly easy place to start with responsive development. If you want to learn more, just visit the documentation!</p>
-      <a class="button button-primary" href="http://getskeleton.com">View Skeleton Docs</a>
+      <p class="section-description">This site uses the Reddit API to scrape the top 100 posts in the past year from r/coolguides. It then uses a rudimentary algorithm to sort each post into 1 of 12 categories.
+        Some posts may be incorrectly sorted as the algorithm is still learning.
+      </p>
+      <!-- <a class="button button-primary" href="http://getskeleton.com">View Skeleton Docs</a> -->
     </div>
   </div>
 
   <div class="section categories">
     <div class="container">
-      <h3 class="section-heading">Responsive Images</h3>
-      <p class="section-description">Skeleton images sit easily in grid with .u-max-full-width class. I suggest exploring solution to serving different images based on device size.</p>
+      <a id = "categories"></a>
+      <h3 class="section-heading">Categories</h3>
+      <p class="section-description">Choose your category to see selected posts. </p>
       <div class="row">
-        <div class="one-half column category">
-          <img class="u-max-full-width" src="images/placeholder.png">
+        <div class="four columns category">
+          <img class="u-max-full-width" id = "Art" src="images/Art.png">
         </div>
-        <div class="one-half column category">
-          <img class="u-max-full-width" src="images/placeholder.png">
+        <div class="four columns category">
+          <img class="u-max-full-width" id = "Business & Finance" src="images/Business.png">
+        </div>
+        <div class="four columns category">
+          <img class="u-max-full-width" id = "Health & Safety" src="images/Health.png">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="four columns category">
+          <img class="u-max-full-width" id = "Politics & Religion" src="images/Politics.png">
+        </div>
+        <div class="four columns category">
+          <img class="u-max-full-width" id = "Geography & History" src="images/Geography.png">
+        </div>
+        <div class="four columns category">
+          <img class="u-max-full-width" id = "Science & Mathematics" src="images/Science.png">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="four columns category">
+          <img class="u-max-full-width" id = "Food & Cooking" src="images/Food.png">
+        </div>
+        <div class="four columns category">
+          <img class="u-max-full-width" id = "Love & Relationships" src="images/Love.png">
+        </div>
+        <div class="four columns category">
+          <img class="u-max-full-width" id = "Home & Auto" src="images/Home.png">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="four columns category">
+          <img class="u-max-full-width" id = "Animals & Nature" src="images/Animal.png">
+        </div>
+        <div class="four columns category">
+          <img class="u-max-full-width" id = "TV, Film & Music" src="images/TV.png">
+        </div>
+        <div class="four columns category">
+          <img class="u-max-full-width" id = "Other (etc.)" src="images/Other.png">
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="section category-picked">
+    <div class="container">
+      <h3 class="section-heading category-chosen"></h3>
+      <p class="section-description">This site uses the Reddit API to scrape the top 100 posts in the past year from r/coolguides. It then uses a rudimentary algorithm to sort each post into 1 of 12 categories.
+        Some posts may be incorrectly sorted as the algorithm is still learning.
+      </p>
+    </div>
+  </div>
+
+  <div class = "footer">
+    <div class = "container">
+  <div class = "row">
+      <p>Copyright &copy; Samuel Reimann 2021</p>
+    </div>
+  </div>
   </div>
 
 

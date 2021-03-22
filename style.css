@@ -4,6 +4,16 @@
     border-radius: 100px;
   }
 
+  /* Borders
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-max-full-width{
+    border-radius: 25px;
+    border: 2px solid #11DFC7;
+    padding: 20px;
+    /* width: 200px;
+    height: 150px; */
+}
+
   /* Font Import */
   @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,600);
   
@@ -56,6 +66,15 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   .get-help {
     border-bottom: 1px solid #ddd;
+  }
+
+   /* Footer
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .footer {
+    background-color: #16967D;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
   }
   
   /* Categories
