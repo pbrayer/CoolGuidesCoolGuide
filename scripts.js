@@ -1,12 +1,16 @@
 $( document ).ready(function() {
 
+
     $(".category-picked").hide();
 
-    //Populating Category
-    $(".u-max-full-width").on("click", (e) => {
-      $(".category-picked").show();
-      $(".category-chosen").text(e.target.id);
-      });
+        //Populating Category
+        $(".u-max-full-width").on("click", (e) => {
+            $(".category-picked").show();
+            $(".category-chosen").text(e.target.id);
+            postArray.forEach(post => {if(post.category === e.target.id){
+                console.log(post)
+            }});
+            });
 
 //Scroll to categories function
 $('a').click(function(){

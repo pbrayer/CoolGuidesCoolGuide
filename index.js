@@ -19,8 +19,9 @@ classifier.learn("Television, Film, & Music", nbayes.stringToDoc('film, films, m
 classifier.learn("Other (etc.)", nbayes.stringToDoc('other'));
 
 
-console.log(classifier.classify(nbayes.stringToDoc('Cool guide of words you can use instead of very.')));
-console.log(classifier.classify(nbayes.stringToDoc('Onion use guide')));
+
+// console.log(classifier.classify(nbayes.stringToDoc('Cool guide of words you can use instead of very.')));
+// console.log(classifier.classify(nbayes.stringToDoc('Onion use guide')));
 // console.log(classifier.classify(nbayes.stringToDoc('Common sword types').words()));
 // console.log(classifier.classify(nbayes.stringToDoc('Crow vs. Raven guide').words()));
 // console.log(classifier.classify(nbayes.stringToDoc('An easy guide to fruit').words()));
@@ -42,6 +43,32 @@ const r = new snoowrap({
 // r.getTop("coolguides").then(console.log);
 
 // r.getSubreddit('coolguides').getTop({time: 'year', limit: 100}).map(post => {return {title: post.title, url: post.url}}).then(console.log);
+// r.getSubreddit('coolguides').getTop({time: 'year', limit: 100}).map(post => {return {title: classifier.classify(nbayes.stringToDoc(post.title)), url: post.url}}).then(console.log);
+
+// r.getSubreddit('coolguides').getTop({time: 'year', limit: 100}).forEach(post => postArray.push(post)).then(console.log(postArray));
+
+  //Arrays
+var postArray = [];
+// const artArray = [];
+// const scienceArray = [];
+// const geographyArray = [];
+// const businessArray = [];
+// const healthArray = [];
+// const politicsArray = [];
+// const foodArray = [];
+// const loveArray = [];
+// const homeArray = [];
+// const animalsArray = [];
+// const tvArray = [];
+// const otherArray = [];
+
+r.getSubreddit('coolguides').getTop({time: 'year', limit: 100}).map(post => {return postArray.push({title: post.title, category: classifier.classify(nbayes.stringToDoc(post.title)), url: post.url})})
+
+
+
+setTimeout(function(){ 
+  module.exports = {postArray};
+}, 5000);
 
 
 

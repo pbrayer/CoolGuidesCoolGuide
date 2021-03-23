@@ -27,6 +27,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/09806aa565.js" crossorigin="anonymous"></script>
+  <script src = "bundle.js"></script>
   <script src = "scripts.js"></script>
 
   <!-- Favicon
@@ -101,49 +102,73 @@
       <p class="section-description">Choose your category to see selected posts. </p>
       <div class="row">
         <div class="four columns category">
-          <img class="u-max-full-width" id = "Art" src="images/Art.png">
+          <a href = "#categories-chosen">
+          <img class="u-max-full-width" id = "Art"  src="images/Art.png">
+        </a>
         </div>
         <div class="four columns category">
+          <a href = "#categories-chosen">
           <img class="u-max-full-width" id = "Business & Finance" src="images/Business.png">
+        </a>
         </div>
         <div class="four columns category">
+          <a href = "#categories-chosen">
           <img class="u-max-full-width" id = "Health & Safety" src="images/Health.png">
+        </a>
         </div>
       </div>
 
       <div class="row">
         <div class="four columns category">
+          <a href = "#categories-chosen">
           <img class="u-max-full-width" id = "Politics & Religion" src="images/Politics.png">
+        </a>
         </div>
         <div class="four columns category">
+          <a href = "#categories-chosen">
           <img class="u-max-full-width" id = "Geography & History" src="images/Geography.png">
+        </a>
         </div>
         <div class="four columns category">
+          <a href = "#categories-chosen">
           <img class="u-max-full-width" id = "Science & Mathematics" src="images/Science.png">
+        </a>
         </div>
       </div>
 
       <div class="row">
         <div class="four columns category">
+          <a href = "#categories-chosen">
           <img class="u-max-full-width" id = "Food & Cooking" src="images/Food.png">
+        </a>
         </div>
         <div class="four columns category">
+          <a href = "#categories-chosen">
           <img class="u-max-full-width" id = "Love & Relationships" src="images/Love.png">
+           </a>
         </div>
         <div class="four columns category">
+          <a href = "#categories-chosen">
           <img class="u-max-full-width" id = "Home & Auto" src="images/Home.png">
+           </a>
         </div>
       </div>
 
       <div class="row">
         <div class="four columns category">
+          <a href = "#categories-chosen">
           <img class="u-max-full-width" id = "Animals & Nature" src="images/Animal.png">
+           </a>
         </div>
         <div class="four columns category">
+          <a href = "#categories-chosen">
           <img class="u-max-full-width" id = "TV, Film & Music" src="images/TV.png">
+           </a>
         </div>
         <div class="four columns category">
+          <a href = "#categories-chosen">
           <img class="u-max-full-width" id = "Other (etc.)" src="images/Other.png">
+           </a>
         </div>
       </div>
     </div>
@@ -151,12 +176,15 @@
 
   <div class="section category-picked">
     <div class="container">
+      <a id = "categories-chosen"></a>
       <h3 class="section-heading category-chosen"></h3>
       <p class="section-description">This site uses the Reddit API to scrape the top 100 posts in the past year from r/coolguides. It then uses a rudimentary algorithm to sort each post into 1 of 12 categories.
         Some posts may be incorrectly sorted as the algorithm is still learning.
       </p>
     </div>
   </div>
+
+  <script type = "text/javascript"></script>
 
   <div class = "footer">
     <div class = "container">
