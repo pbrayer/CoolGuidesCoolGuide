@@ -14,7 +14,9 @@
   "author": "Sam",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "nbayes": "^3.0.2",
+    "path": "^0.12.7",
     "snoowrap": "^1.22.0"
   }
 }

@@ -3,6 +3,8 @@
 const snoowrap = require('snoowrap');
 const nbayes = require('nbayes');
 
+
+module.exports = function() { 
 //Teaching classifier some keywords
 const classifier = nbayes();
 classifier.learn("Art", nbayes.stringToDoc('paper, draw, tattoo, tattoos, visual, dnd, abstraction,abundance,aesthetic,art,art form,art gallery,art style,artist,artistic career,artistic endeavor,artistic expression,artistic genius,artwork,assemblage,balance,beauty,body of work,brushwork,camera,canvas,character,collection,collector,color,complexity,composition,concept,conception,contrasts,conviction,creative approach,creativity,dedication,depth,masterpiece,mastery,maturity,meaning,medium,method,mixed media,mood,motif,movement,museum,mystique,narrative,nuance,painting,palette,panel,passion,patron,pattern,perception,perspective,philosophy,photo,photograph,picture,piece,portrait,preoccupation,print,process,purity,quality,reaction,realm,detail,diptych,draftsmanship,duality,element,exhibition,exploration,expression,figure,form,format,gallery,growth,hanging,hue,icon,iconic value,ideal,illustration,image,imagery,impact,innovation,inspiration,installation,instinct,intensity,interaction,interpretation,intricacies,journey,juxtaposition,labyrinth,landscape,luminosity,reflection,representation,scene,scenery,sculptor,sculpture,self-portrait,sensation,sensitivity,sensuality,series,shading,show,skill,space,splendor,style,subconscious,subject,subject matter,symbol,symbolism,talent,taste,technique,texture,theme,transformation,triptych,understanding,urge,viewer,viewing,vision,visualization'));
@@ -64,14 +66,13 @@ var postArray = [];
 
 r.getSubreddit('coolguides').getTop({time: 'year', limit: 100}).map(post => {return postArray.push({title: post.title, category: classifier.classify(nbayes.stringToDoc(post.title)), url: post.url})})
 
-
-
-setTimeout(function(){ 
-  module.exports = {postArray};
-}, 5000);
-
+setTimeout(function(){
+  sessionStorage.setItem('postArray', JSON.stringify(postArray));
+  console.log(postArray);
+}, 4000);
 
 
 
+}
 
 
